@@ -1,9 +1,9 @@
-// Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2015 The nealcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_PLATFORMSTYLE_H
-#define BITCOIN_QT_PLATFORMSTYLE_H
+#ifndef nealcoin_QT_PLATFORMSTYLE_H
+#define nealcoin_QT_PLATFORMSTYLE_H
 
 #include <QIcon>
 #include <QPixmap>
@@ -51,5 +51,5 @@ private:
     /* ... more to come later */
 };
 
-#endif // BITCOIN_QT_PLATFORMSTYLE_H
+#endif // nealcoin_QT_PLATFORMSTYLE_H
 

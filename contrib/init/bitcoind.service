@@ -1,15 +1,15 @@
 [Unit]
-Description=Bitcoin's distributed currency daemon
+Description=nealcoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=bitcoin
-Group=bitcoin
+User=nealcoin
+Group=nealcoin
 
 Type=forking
-PIDFile=/var/lib/bitcoind/bitcoind.pid
-ExecStart=/usr/bin/bitcoind -daemon -pid=/var/lib/bitcoind/bitcoind.pid \
--conf=/etc/bitcoin/bitcoin.conf -datadir=/var/lib/bitcoind -disablewallet
+PIDFile=/var/lib/nealcoind/nealcoind.pid
+ExecStart=/usr/bin/nealcoind -daemon -pid=/var/lib/nealcoind/nealcoind.pid \
+-conf=/etc/nealcoin/nealcoin.conf -datadir=/var/lib/nealcoind -disablewallet
 
 Restart=always
 PrivateTmp=true

@@ -1,33 +1,33 @@
-# /etc/conf.d/bitcoind: config file for /etc/init.d/bitcoind
+# /etc/conf.d/nealcoind: config file for /etc/init.d/nealcoind
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
+#nealcoinD_CONFIGFILE="/etc/nealcoin/nealcoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/bitcoind"
+# What directory to write pidfile to?  (created and owned by $nealcoinD_USER)
+#nealcoinD_PIDDIR="/var/run/nealcoind"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitcoind.pid"
+#nealcoinD_PIDFILE="${nealcoinD_PIDDIR}/nealcoind.pid"
 
-# Where to write bitcoind data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/bitcoind"
+# Where to write nealcoind data (be mindful that the blockchain is large)
+#nealcoinD_DATADIR="/var/lib/nealcoind"
 
-# User and group to own bitcoind process
-#BITCOIND_USER="bitcoin"
-#BITCOIND_GROUP="bitcoin"
+# User and group to own nealcoind process
+#nealcoinD_USER="nealcoin"
+#nealcoinD_GROUP="nealcoin"
 
-# Path to bitcoind executable
-#BITCOIND_BIN="/usr/bin/bitcoind"
+# Path to nealcoind executable
+#nealcoinD_BIN="/usr/bin/nealcoind"
 
-# Nice value to run bitcoind under
-#BITCOIND_NICE=0
+# Nice value to run nealcoind under
+#nealcoinD_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-BITCOIND_OPTS="-disablewallet"
+nealcoinD_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# The timeout in seconds OpenRC will wait for nealcoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-BITCOIND_SIGTERM_TIMEOUT=60
+nealcoinD_SIGTERM_TIMEOUT=60

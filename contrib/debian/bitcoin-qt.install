@@ -1,6 +1,6 @@
-usr/local/bin/bitcoin-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/bitcoin-qt.desktop usr/share/applications
-debian/bitcoin-qt.protocol usr/share/kde4/services/
+usr/local/bin/nealcoin-qt usr/bin
+share/pixmaps/nealcoin32.xpm usr/share/pixmaps
+share/pixmaps/nealcoin16.xpm usr/share/pixmaps
+share/pixmaps/nealcoin128.png usr/share/pixmaps
+debian/nealcoin-qt.desktop usr/share/applications
+debian/nealcoin-qt.protocol usr/share/kde4/services/

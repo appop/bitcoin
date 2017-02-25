@@ -1,9 +1,9 @@
-// Copyright (c) 2016 The Bitcoin Core developers
+// Copyright (c) 2016 The nealcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_THREADINTERRUPT_H
-#define BITCOIN_THREADINTERRUPT_H
+#ifndef nealcoin_THREADINTERRUPT_H
+#define nealcoin_THREADINTERRUPT_H
 
 #include <atomic>
 #include <chrono>
@@ -31,4 +31,4 @@ private:
     std::atomic<bool> flag;
 };
 
-#endif //BITCOIN_THREADINTERRUPT_H
+#endif //nealcoin_THREADINTERRUPT_H

@@ -1,13 +1,13 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/bitcoin-tx
-src/test/test_bitcoin
-src/test/test_bitcoin_fuzzy
-src/qt/test/test_bitcoin-qt
+src/nealcoin
+src/nealcoind
+src/nealcoin-cli
+src/nealcoin-tx
+src/test/test_nealcoin
+src/test/test_nealcoin_fuzzy
+src/qt/test/test_nealcoin-qt
 
 # autoreconf
 Makefile.in
@@ -30,8 +30,8 @@ config.log
 config.status
 configure
 libtool
-src/config/bitcoin-config.h
-src/config/bitcoin-config.h.in
+src/config/nealcoin-config.h
+src/config/nealcoin-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -74,12 +74,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+nealcoin-qt
+nealcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+nealcoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -93,7 +93,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_bitcoin.coverage/
+test_nealcoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -109,5 +109,5 @@ qa/cache/*
 
 /doc/doxygen/
 
-libbitcoinconsensus.pc
+libnealcoinconsensus.pc
 contrib/devtools/split-debug.sh

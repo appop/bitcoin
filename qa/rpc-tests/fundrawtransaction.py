@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2014-2016 The nealcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the fundrawtransaction RPC."""
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import nealcoinTestFramework
 from test_framework.util import *
 
 
@@ -15,7 +15,7 @@ def get_unspent(listunspent, amount):
     raise AssertionError('Could not find unspent with amount={}'.format(amount))
 
 
-class RawTransactionsTest(BitcoinTestFramework):
+class RawTransactionsTest(nealcoinTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -202,9 +202,9 @@ class RawTransactionsTest(BitcoinTestFramework):
 
         try:
             self.nodes[2].fundrawtransaction(rawtx, {'changeAddress': 'foobar'})
-            raise AssertionError("Accepted invalid bitcoin address")
+            raise AssertionError("Accepted invalid nealcoin address")
         except JSONRPCException as e:
-            assert("changeAddress must be a valid bitcoin address" in e.error['message'])
+            assert("changeAddress must be a valid nealcoin address" in e.error['message'])
 
 
         ############################################################

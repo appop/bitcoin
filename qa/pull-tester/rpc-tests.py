@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2014-2016 The nealcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -11,7 +11,7 @@ forward all unrecognized arguments onto the individual test scripts.
 RPC tests are disabled on Windows by default. Use --force to run them anyway.
 
 For a description of arguments recognized by test scripts, see
-`qa/pull-tester/test_framework/test_framework.py:BitcoinTestFramework.main`.
+`qa/pull-tester/test_framework/test_framework.py:nealcoinTestFramework.main`.
 
 """
 
@@ -86,7 +86,7 @@ BASE_SCRIPTS= [
 ]
 
 ZMQ_SCRIPTS = [
-    # ZMQ test can only be run if bitcoin was built with zmq-enabled.
+    # ZMQ test can only be run if nealcoin was built with zmq-enabled.
     # call rpc_tests.py with -nozmq to explicitly exclude these tests.
     "zmq_test.py"]
 
@@ -151,17 +151,17 @@ def main():
 
     enable_wallet = config["components"].getboolean("ENABLE_WALLET")
     enable_utils = config["components"].getboolean("ENABLE_UTILS")
-    enable_bitcoind = config["components"].getboolean("ENABLE_BITCOIND")
+    enable_nealcoind = config["components"].getboolean("ENABLE_nealcoinD")
     enable_zmq = config["components"].getboolean("ENABLE_ZMQ") and not args.nozmq
 
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
-        # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
-        # https://github.com/bitcoin/bitcoin/pull/5677#issuecomment-136646964
+        # https://github.com/nealcoin/nealcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
+        # https://github.com/nealcoin/nealcoin/pull/5677#issuecomment-136646964
         print("Tests currently disabled on Windows by default. Use --force option to enable")
         sys.exit(0)
 
-    if not (enable_wallet and enable_utils and enable_bitcoind):
-        print("No rpc tests to run. Wallet, utils, and bitcoind must all be enabled")
+    if not (enable_wallet and enable_utils and enable_nealcoind):
+        print("No rpc tests to run. Wallet, utils, and nealcoind must all be enabled")
         print("Rerun `configure` with -enable-wallet, -with-utils and -with-daemon and rerun make")
         sys.exit(0)
 
@@ -219,8 +219,8 @@ def run_tests(test_list, src_dir, build_dir, exeext, jobs=1, enable_coverage=Fal
         BOLD = ('\033[0m', '\033[1m')
 
     #Set env vars
-    if "BITCOIND" not in os.environ:
-        os.environ["BITCOIND"] = build_dir + '/src/bitcoind' + exeext
+    if "nealcoinD" not in os.environ:
+        os.environ["nealcoinD"] = build_dir + '/src/nealcoind' + exeext
 
     tests_dir = src_dir + '/qa/rpc-tests/'
 
@@ -283,7 +283,7 @@ class RPCTestHandler:
         self.test_list = test_list
         self.flags = flags
         self.num_running = 0
-        # In case there is a graveyard of zombie bitcoinds, we can apply a
+        # In case there is a graveyard of zombie nealcoinds, we can apply a
         # pseudorandom offset to hopefully jump over them.
         # (625 is PORT_RANGE/MAX_NODES)
         self.portseed_offset = int(time.time() * 1000) % 625
@@ -330,7 +330,7 @@ class RPCCoverage(object):
     Coverage calculation works by having each test script subprocess write
     coverage files into a particular directory. These files contain the RPC
     commands invoked during testing, as well as a complete listing of RPC
-    commands per `bitcoin-cli help` (`rpc_interface.txt`).
+    commands per `nealcoin-cli help` (`rpc_interface.txt`).
 
     After all tests complete, the commands run are combined and diff'd against
     the complete list to calculate uncovered RPC commands.

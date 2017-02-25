@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Bitcoin Core developers
+// Copyright (c) 2009-2016 The nealcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_MERKLEBLOCK_H
-#define BITCOIN_MERKLEBLOCK_H
+#ifndef nealcoin_MERKLEBLOCK_H
+#define nealcoin_MERKLEBLOCK_H
 
 #include "serialize.h"
 #include "uint256.h"
@@ -154,4 +154,4 @@ public:
     }
 };
 
-#endif // BITCOIN_MERKLEBLOCK_H
+#endif // nealcoin_MERKLEBLOCK_H
